@@ -9,8 +9,6 @@ public class FahrtToCelTest {
 
     @Test
     public void testConvertFahr() {
-
         assertEquals(0, FahrtToCel.convertFahr(32), 0.01);
-
     }
 }

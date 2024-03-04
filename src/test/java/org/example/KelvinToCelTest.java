@@ -8,8 +8,6 @@ public class KelvinToCelTest {
 
     @Test
     public void testConvertKelvinToCelsius() {
-
         assertEquals(0, KelvinToCel.convertKelvinToCelsius(273.15f), 0.01);
-
     }
 }
