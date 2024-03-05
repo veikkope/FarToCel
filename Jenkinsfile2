@@ -14,7 +14,7 @@ pipeline {
             steps {
                 script {
                     def lowercaseTag = DOCKER_IMAGE_TAG.toLowerCase()
-                    docker.build("veikkope/fartocel:${lowercaseTag}")
+                    docker.build("veikkope1/fartocel:${lowercaseTag}")
                 }
             }
         }
@@ -22,7 +22,7 @@ pipeline {
             steps {
                 script {
                     docker.withRegistry('https://index.docker.io/v1/', 'DOCKERHUB_CREDENTIALS_ID') {
-                        docker.image("veikkope/fartocel:${DOCKER_IMAGE_TAG}").push()
+                        docker.image("veikkope1/fartocel:${DOCKER_IMAGE_TAG}").push()
                     }
                 }
             }
